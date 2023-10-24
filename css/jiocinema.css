@@ -1,0 +1,501 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+    --base-font-family: Roboto, Helvetica, Arial, sans-serif;
+    --base-color: rgba(0,0,0,0.87);
+    --base-font-weight: 400;
+    --base-font-size: 1rem;
+    --base-background-color: rgb(255,255,255);
+    --base-navbar-box-color: #0D0E10;
+    --base-navbar-box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    --base-btn-color: rgb(217,0,141);
+    --base-hover-btn-color: rgb(124, 42, 96); 
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--base-font-family);
+    color: var(--base-color);
+    font-weight: var(--base-font-weight);
+    font-size: var(--base-font-size);
+    background-color: var(--base-background-color);
+}
+
+#_jio_cinema_header {
+    background-color: var(--base-navbar-box-color);
+    box-shadow: var(--base-navbar-box-shadow);
+    height: 80px;
+    color: #fff;
+    width: 100%;
+}
+
+#_jio_cinema_header > article {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: inherit; /*align-items won't work without specifying height*/
+}
+
+.leftBlock {
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.rightBlock {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.leftBlock nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.leftBlock nav ul li a {
+    text-decoration: none;
+    padding: 10px 14px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.logoBlock {
+    flex-basis: 20%;
+}
+
+.leftMenuBlock {
+    flex-basis: 80%;
+}
+
+.logoBlock a {
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.subscribe {
+    cursor: pointer;
+    padding: 4px 14px !important;
+    border: 2px solid rgb(193, 163, 98);
+    border-radius: 34px;
+    color: rgb(193, 163, 98) !important;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.for_you {
+    border: 2px solid white;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.rightBlock .userBlock img {
+    width: 40px;
+    height: 40px;
+}
+
+.searchBlock {
+    position: relative;
+}
+
+.searchBlock input {
+    padding: 13px 23px;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #888;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+}
+
+.searchBlock span:nth-child(2) {
+    position: absolute;
+    right: 24px;
+    top: 12px;
+}
+
+.sidebar_nav {
+    position: absolute;
+    background-color: #111;
+    top: 62px;
+    right: -76px;
+    width: 350px;
+    height: 100vh;
+}
+
+.sidebar_nav .container {
+    padding: 20px 30px;
+}
+
+.sidebar_nav .login_Block {
+    display: flex;
+    padding: 10px 0 20px; 
+    align-items: center;
+}
+
+.sidebar_nav .login_Block figure {
+    flex-basis: 10%;
+}
+
+.sidebar_nav .login_Block .guest {
+    flex-basis: 80%;
+    padding: 0 20px;
+}
+
+.sidebar_nav .login_Block .arrow {
+    flex-basis: 10%;
+}
+
+.MuiSvgIcon-root {
+    user-select: none;
+    display: inline-block;
+    fill: currentcolor;
+    flex-shrink: 0;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-size: 1.5rem;
+    width: 0.6em;
+    height: 0.7em;
+    color: rgb(255, 255, 255);
+}
+
+.sidebar_nav a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+}
+
+.sidebar_nav .guest p:last-child a {
+    color: #999;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.sidebar_nav main:nth-child(1) main {
+    padding: 20px 0;
+    border-bottom: 1px solid #555;
+}
+
+.sidebar_nav main:nth-child(1) footer {
+    padding: 20px 0;
+}
+
+.userBlock label {
+    /* display: none; */
+    position: absolute;
+    top: 0px;
+    right: -350px;
+    /* transform: translate(390px, -44px); */
+    transition: ease all 0.3s;
+    overflow: hidden;
+}
+
+.userBlock input[type="checkbox"]:checked + label {
+    /* visibility: visible; */
+    /* display: block !important; */
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    z-index: 10;
+    /* transform: translate(400px 100px); */
+    /* transition: 0.5s; */
+    transition: all 0.6s ease 0s;
+    overflow: visible; 
+}
+
+.userBlock {
+    position: relative;
+}
+
+.userBlock input[type="checkbox"] {
+    position: absolute;
+    top: -31px;
+    right: 0px;
+    padding: 20px;
+    height: 102px;
+    display: block;
+    width: 40px;
+    background: transparent;
+    opacity: 0;
+}
+
+#_jio_cinema_slider {
+    width: 100%;
+    height: 600px;
+    /* height: 600px; */
+    background-color: black;
+}
+
+#_jio_cinema_slider article {
+    display: flex;
+    /* align-items: center; */ 
+}
+
+.gradient {
+    width: 60%;
+    height: 600px;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    z-index: 1;
+    background: linear-gradient(180deg, #0D0E10 3%, rgba(13, 14, 16, 0) 18.6%),linear-gradient(180.13deg, rgba(13, 14, 16, 0) 62.57%, #0D0E10 88.89%);;
+    box-shadow: 100px 0px 1000px 0px inset black;
+}
+
+#_jio_cinema_slider img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 650px;
+    /* position: absolute;
+    right: 0px; */
+}
+
+.left_Slider_Block {
+    flex-basis: 40%;
+    position: relative;
+}
+
+.right_Slider_Block {
+    flex-basis: 60%;
+}
+
+/* .shadow-color {
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    right: -120px;
+    background: linear-gradient();
+} */
+
+.left_Slider_Block footer {
+    margin: 27px 30px;
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    bottom: 10%;
+}
+
+.left_Slider_Block footer h2 {
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 1.1px;
+    padding-bottom: 14px;
+}
+
+#_jio_cinema_slider footer button {
+    background-color: var(--base-btn-color);
+    padding: 13px 24px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#_jio_cinema_slider footer button i {
+    padding: 0 6px;
+}
+
+#_jio_cinema_slider footer button:hover {
+    background-color: var(--base-hover-btn-color);
+    transition: ease all 0.6s;
+}
+
+/* JUST FOR YOU CSS STARTS HERE */
+
+#_just_for_you {
+    background: #111;
+    color: #fff;
+    padding: 10px 30px;
+} 
+
+#_just_for_you header h2 {
+    font-size: 20px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+#_just_for_you main {
+    display: flex;
+    gap: 10px;
+}
+
+#_just_for_you main aside {
+    flex: 1;   
+}
+
+#_just_for_you aside img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* JUST FOR YOU CSS ENDS HERE */
+
+#_popular_sports {
+    background: #111;
+    padding: 10px 30px;
+}
+
+#_popular_sports header h2 {
+    font-size: 20px;
+    padding: 20px 0;
+    font-weight: bold;
+    color: white;
+}
+
+#_popular_sports main {
+    display: flex;
+    gap: 10px;
+}
+
+#_popular_sports main aside {
+    flex: 1;
+}
+
+#_popular_sports main aside button {
+    border: none;
+    background: #292A2C;
+    border-radius: 10px;
+}
+
+#_popular_sports main aside button:hover {
+    background: #525457;
+}
+
+#_popular_sports main aside img {
+    width: 100%;
+}
+
+/* FOOTER STARTS HERE */
+
+#_footer_block {
+    background-color: #17181A;
+    color: white;
+}
+
+#_footer_block .topSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+#_footer_block .leftSide {
+    display: flex;
+    gap: 40px;
+    flex-basis: 50%;
+}
+
+#_footer_block .leftSide div {
+    line-height: 2;
+}
+
+#_footer_block .leftSide div a {
+    text-decoration: none;
+    color: white;
+}
+
+#_footer_block .rightSide {
+    display: flex;
+    flex-basis: 50%;
+    gap: 50px;
+    justify-content: flex-end;
+}
+
+#_footer_block .rightSide .iconBox {
+    margin: 35px 0;
+}
+
+#_footer_block .rightSide .iconBox a {
+    background-color: rgb(51,52,54);
+    border-radius: 50%;
+    padding: 18px 28px;
+    position: relative;
+    margin: 0 3px;
+}
+
+#_footer_block .rightSide .iconBox a img {
+    position: absolute;
+    top: 15px;
+    left: 15px;  
+}
+
+#_footer_block .rightSide .storeBox {
+    margin: 20px 0;
+}
+
+#_footer_block .rightSide .storeBox img {
+    width: 100px;
+    height: 40px;
+}
+
+#_footer_block h2 {
+    /* font-weight: bold; */
+}
+
+#_footer_block .bottomSection {
+    background: rgb(32,33,35);
+}
+
+#_footer_block .bottomSection div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+
+#_footer_block .bottomSection p {
+    font-size: 13px;
+    letter-spacing: .5px;
+}
+#_footer_block .bottomSection img {
+    width: 40px;
+    height: 40px;
+}
+
+
+                
+
+
+
+
+
+/* FOOTER ENDS HERE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
